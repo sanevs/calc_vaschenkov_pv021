@@ -236,6 +236,7 @@
 
             <Button
                 android:id="@+id/btn_zero"
+                android:onClick="onClickButtonCalc"
                 android:layout_width="202dp"
                 android:layout_height="101dp"
                 android:backgroundTint="#D0254BD8"

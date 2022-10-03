@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -19,20 +20,29 @@ import com.example.kw2_vaschenkov_pv021.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-
+    ConstraintLayout layout = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_second);
+
+        layout = findViewById(R.id.activity);
+
         if(savedInstanceState != null)
         {
             textResultCur = savedInstanceState.getString("result");
@@ -54,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        nameTexts.put("Ann", "This is Ann");
+        nameTexts.put("John", "This is John");
+        nameTexts.put("Frank", "This is Frank");
     }
 
     @Override
@@ -146,6 +160,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickButtonCalc(View view)
     {
+        Button button = (Button) view;
+        Integer buttonValue = 0;
+        try {
+            buttonValue = Integer.parseInt(button.getText().toString());
+        }
+        catch (NumberFormatException exception) {}
         int id = view.getId();
         switch (id){
             case R.id.btn_plus:
@@ -163,39 +183,23 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_clear:
                 ((TextView)this.findViewById(R.id.text_result)).setText("");
                 break;
-            case R.id.btn_one:
-                checkAction(1);
-                break;
-            case R.id.btn_two:
-                checkAction(2);
-                break;
-            case R.id.btn_three:
-                checkAction(3);
-                break;
-            case R.id.btn_four:
-                checkAction(4);
-                break;
-            case R.id.btn_five:
-                checkAction(5);
-                break;
-            case R.id.btn_six:
-                checkAction(6);
-                break;
-            case R.id.btn_seven:
-                checkAction(7);
-                break;
-            case R.id.btn_eight:
-                checkAction(8);
-                break;
-            case R.id.btn_nine:
-                checkAction(9);
-                break;
-            case R.id.btn_zero:
-                checkAction(0);
-                break;
             default:
-                throw new IllegalStateException("Unexpected value: " + id);
+                checkAction(buttonValue);
         }
     }
 
+    public void onClickGridButton1(View view)
+    {
+        GridLayout gridLayout = this.findViewById(R.id.grid);
+        Button b1 = new Button(this);
+        b1.setText("new button");
+        gridLayout.addView(b1);
+    }
+
+    private Map<String, String> nameTexts = new HashMap<String, String>();
+    public void onClickShowName(View view){
+        TextView text = findViewById(R.id.nameText);
+        text.setText(nameTexts.get(
+                ((Button)view).getText()));
+    }
 }

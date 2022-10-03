@@ -5,7 +5,13 @@
       <map>
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout-land/fragment_second.xml" value="0.25" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout-land/landscape_calc.xml" value="0.25104166666666666" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/fragment_names.xml" value="0.25" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/fragment_second.xml" value="0.21829710144927536" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/names.xml" value="0.1885245901639344" />
       </map>
     </option>
   </component>
