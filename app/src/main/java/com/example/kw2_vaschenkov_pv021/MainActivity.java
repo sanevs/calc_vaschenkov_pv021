@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,9 +22,11 @@ import com.example.kw2_vaschenkov_pv021.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -202,4 +205,24 @@ public class MainActivity extends AppCompatActivity {
         text.setText(nameTexts.get(
                 ((Button)view).getText()));
     }
+
+    public void onClickShowDays(View view){
+
+        ListView lvDaysOfweek = (ListView)
+                this.findViewById(R.id.lvDaysOfWeek);
+        String[] arrDaysOfWeek ={
+                "Понедельник", "Вторник", "Среда",
+                "Четверг", "Пятница", "Суббота",
+                "Воскресенье"
+        };
+        Log.println(Log.INFO, "1", "msg");
+        ArrayAdapter<String> lvAdapter =
+                new ArrayAdapter<>(this,
+                        R.layout.my_text_view_adapter
+                                , arrDaysOfWeek);
+        //--Назначение Адаптера Данных списку ListView----
+        //--с днями недели--------------------------------
+        lvDaysOfweek.setAdapter(lvAdapter);
+    }
+
 }

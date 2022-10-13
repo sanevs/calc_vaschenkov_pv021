@@ -17,6 +17,12 @@
         <action
             android:id="@+id/action_FirstFragment_to_names"
             app:destination="@id/names" />
+        <action
+            android:id="@+id/action_FirstFragment_to_myListViewFragment2"
+            app:destination="@id/myListViewFragment2" />
+        <action
+            android:id="@+id/action_FirstFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -35,6 +41,24 @@
         tools:layout="@layout/fragment_names" >
         <action
             android:id="@+id/action_names_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myListViewFragment2"
+        android:name="com.example.kw2_vaschenkov_pv021.MyListViewFragment"
+        android:label="my_list_view"
+        tools:layout="@layout/my_constraint_listview" >
+        <action
+            android:id="@+id/action_myListViewFragment2_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.kw2_vaschenkov_pv021.TasksFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

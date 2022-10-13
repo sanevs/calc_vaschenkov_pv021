@@ -6,6 +6,8 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Calculator</string>
     <string name="names">Show names</string>
+    <string name="tasks">Show tasks</string>
+    <string name="listview">Show days of week</string>
     <string name="previous">Previous</string>
     <string name="action_info">Info</string>
     <string name="action_C">C</string>
@@ -20,4 +22,6 @@
     <!-- Strings used for fragments for navigation -->
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
