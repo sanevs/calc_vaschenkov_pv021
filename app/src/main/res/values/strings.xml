@@ -5,8 +5,11 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Calculator</string>
+    <string name="activity2">Activity 2</string>
     <string name="names">Show names</string>
     <string name="tasks">Show tasks</string>
+    <string name="files">Show files</string>
+    <string name="create_file">Create file</string>
     <string name="listview">Show days of week</string>
     <string name="previous">Previous</string>
     <string name="action_info">Info</string>

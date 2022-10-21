@@ -1,17 +1,22 @@
 package com.example.kw2_vaschenkov_pv021;
 
-import android.os.AsyncTask;
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -21,16 +26,15 @@ import com.example.kw2_vaschenkov_pv021.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
+import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.fragment_second);
 
         layout = findViewById(R.id.activity);
@@ -197,6 +202,9 @@ public class MainActivity extends AppCompatActivity {
         Button b1 = new Button(this);
         b1.setText("new button");
         gridLayout.addView(b1);
+
+        //fragment 1610
+        Toast.makeText(this, "New button", Toast.LENGTH_LONG).show();
     }
 
     private Map<String, String> nameTexts = new HashMap<String, String>();
@@ -225,4 +233,33 @@ public class MainActivity extends AppCompatActivity {
         lvDaysOfweek.setAdapter(lvAdapter);
     }
 
+    public void onClickShowFilesDialog(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(
+                this, android.R.style.Widget_DeviceDefault);
+        builder.setTitle("Files dialog");
+        //builder.setView(R.id.textView);
+        ArrayList<String> files = new ArrayList<>();
+
+        //files urok 3, 5
+        String externalStorageState = Environment.getExternalStorageState();
+        File externalStorageDirectory = Environment.getExternalStorageDirectory();
+        Log.d(MainActivity.PRINT_SERVICE,
+                "File storage dir: " + externalStorageDirectory.getAbsolutePath());
+        Toast.makeText(this, externalStorageDirectory.getAbsolutePath(), Toast.LENGTH_LONG).show();
+
+        String[] filesStr = new String[externalStorageDirectory.listFiles().length];
+        for (int i = 0; i < filesStr.length; i++) {
+            filesStr[i] = externalStorageDirectory.listFiles()[i].getName();
+        }
+
+        builder.setItems(filesStr, null);
+        builder.setNegativeButton("Close", null);
+        builder.create().show();
+    }
+
+    public void onClickActivity2(View view){
+        Intent intent = new Intent(this,
+                MainActivity2.class);
+        startActivity(intent);
+    }
 }

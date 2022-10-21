@@ -8,8 +8,8 @@
 
     <GridLayout
         android:id="@+id/grid"
-        android:layout_width="370dp"
-        android:layout_height="408dp"
+        android:layout_width="390dp"
+        android:layout_height="244dp"
         android:layout_gravity="bottom"
         android:columnCount="3"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
 
     <TextView
         android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/hello_first_fragment"
         app:layout_constraintBottom_toTopOf="@id/button_first"
@@ -32,22 +32,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <Button
+        android:id="@+id/button_activity2"
+        android:onClick="onClickActivity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="340dp"
+        android:text="@string/activity2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_names"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="432dp"
         android:text="@string/names"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/grid" />
@@ -56,10 +70,21 @@
         android:id="@+id/button_listview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="376dp"
         android:onClick="onClickShowDays"
         android:text="@string/listview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid" />
+
+    <Button
+        android:id="@+id/button_files"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="432dp"
+        android:onClick="onClickShowFilesDialog"
+        android:text="@string/files"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/grid" />
 
@@ -67,9 +92,10 @@
         android:id="@+id/button_tasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="432dp"
         android:text="@string/tasks"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/grid" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

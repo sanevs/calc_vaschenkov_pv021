@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"
+        android:textSize="10pt"
+        android:textColor="#154F8A"
+        android:text="Выберите каталог:" />
+
+    <ListView
+        android:id="@+id/lvDirList"
+        android:layout_width="match_parent"
+        android:layout_height="412dp"
+        android:layout_weight="1"
+        android:background="#F0FFF0"></ListView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"
+        android:textSize="8pt"
+        android:textColor="#FFFFFF"
+        android:text="Введите название файла:" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:id="@+id/etFileName" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"
+        android:textSize="8pt"
+        android:textColor="#FFFFFF"
+        android:text="Введите содержимое файла:" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:id="@+id/etFileContent" />
+</LinearLayout>
