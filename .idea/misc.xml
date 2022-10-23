@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.227" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/drawable/frame_animation_running_man.xml" value="0.2295" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/drawable/ic_launcher_background.xml" value="0.227" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout-land/fragment_second.xml" value="0.25" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout-land/landscape_calc.xml" value="0.25104166666666666" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/activity_main2.xml" value="0.20064724919093851" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/activity_main2.xml" value="0.2" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/card_view6.xml" value="0.2427536231884058" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/create_file_dialog.xml" value="0.27445652173913043" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
@@ -21,6 +25,7 @@
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/my_listview_.xml" value="0.2726449275362319" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/my_text_view_adapter.xml" value="0.22509057971014493" />
         <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/layout/names.xml" value="0.1885245901639344" />
+        <entry key="..\:/AndroidSdk/AndroidProjects/kw2_vaschenkov_pv021/app/src/main/res/menu/menu_main.xml" value="0.27708333333333335" />
         <entry key="..\:/AndroidSdk/platforms/android-33/data/res/layout/simple_list_item_1.xml" value="0.22509057971014493" />
       </map>
     </option>

@@ -3,6 +3,7 @@ package com.example.kw2_vaschenkov_pv021;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -29,6 +30,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.fragment_second);
+        ActivityCompat.requestPermissions(
+                this,
+                new String[]
+                        {
+                                Manifest.permission.MANAGE_EXTERNAL_STORAGE,
+                        }, 1);
 
         layout = findViewById(R.id.activity);
 
@@ -103,6 +111,17 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if(id == R.id.action_animation){
+            ImageView human = (ImageView) findViewById(R.id.imgHuman);
+            human.setBackgroundResource(R.drawable.frame_animation_running_man);
+            AnimationDrawable animationDrawable = (AnimationDrawable) human.getBackground();
+            if(animationDrawable.isRunning())
+                human.setBackgroundResource(0);
+            else
+                animationDrawable.start();
             return true;
         }
 
@@ -258,8 +277,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickActivity2(View view){
-        Intent intent = new Intent(this,
-                MainActivity2.class);
+        Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
     }
 }

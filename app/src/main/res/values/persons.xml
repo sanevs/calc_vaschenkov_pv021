@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="name11">1</string>
+    <string-array name="persons">
+        <item>11q</item>
+        <item>12w</item>
+    </string-array>
+</resources>

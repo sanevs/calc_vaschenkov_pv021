@@ -1,4 +1,4 @@
-package com.example.kw2_vaschenkov_pv021;
+package com.example.kw2_vaschenkov_pv021.Data;
 
 public class Product {
     public int id;
