@@ -19,7 +19,6 @@ public class MyListViewFragment extends Fragment {
 
     private MyConstraintListviewBinding binding;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

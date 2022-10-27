@@ -7,6 +7,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Calculator</string>
     <string name="activity2">Files</string>
+    <string name="activity3">Tabs</string>
     <string name="names">Show names</string>
     <string name="tasks">Show tasks</string>
     <string name="files">Show files</string>
@@ -28,4 +29,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_files_fragment">Здесь можно создать файл</string>
+    <string name="title_activity_main3">MainActivity3</string>
 </resources>

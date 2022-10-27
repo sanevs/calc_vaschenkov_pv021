@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/text1"
     android:gravity="center_horizontal"
-    android:textSize="12pt">
+    android:textSize="12pt"
+    android:textColor="@color/black">
 
 </TextView>

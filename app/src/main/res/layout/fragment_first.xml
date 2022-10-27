@@ -49,13 +49,25 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/button_activity3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="292dp"
+        android:onClick="onClickActivity3"
+        android:text="@string/activity3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/imgHuman"
         android:layout_width="166dp"
         android:layout_height="137dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="490dp"
         android:layout_marginEnd="61dp"
         android:layout_marginBottom="190dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,8 +102,8 @@
         android:id="@+id/button_listview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="32dp"
         android:onClick="onClickShowDays"
         android:text="@string/listview"
         app:layout_constraintStart_toStartOf="parent"

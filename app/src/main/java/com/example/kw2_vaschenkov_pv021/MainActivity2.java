@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -96,10 +97,10 @@ public class MainActivity2 extends AppCompatActivity {
          */
         int permission = ActivityCompat.checkSelfPermission(
                 this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        //if (permission != PackageManager.PERMISSION_GRANTED)
-        //{
+
+        if (permission != PackageManager.PERMISSION_GRANTED)
+        {
             //-- Разрешения нет, запросим это разрешение
-            //-- у пользователя ------------------------------
             ActivityCompat.requestPermissions(
                     this,
                     new String[]
@@ -114,52 +115,35 @@ public class MainActivity2 extends AppCompatActivity {
             permission = ActivityCompat.checkSelfPermission(
                     this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
             Toast.makeText(this, permission + ", " + externalStorageState, Toast.LENGTH_SHORT).show();
-        //}
+        }
     }
 
     private void setRecyclerView(){
-        // ----- Toolbar ---------------------------------
-//        Toolbar toolBar = (Toolbar)
-//                this.findViewById(R.id.toolbar);
-//        this.setSupportActionBar(toolBar);
-//        toolBar.setTitle(R.string.app_name);
-//        toolBar.setSubtitle("RecyclerView");
-//        toolBar.setTitleTextColor(Color.WHITE);
-//        toolBar.setSubtitleTextColor(Color.WHITE);
-//// ----- CollapsingToolbarLayout text title colors
-//        CollapsingToolbarLayout collapsingToolbarLayout =
-//                (CollapsingToolbarLayout)
-//                        this.findViewById(R.id.main_collapsing);
-//        collapsingToolbarLayout.setExpandedTitleColor(
-//                Color.rgb(0x00, 0x33, 0x66));
-//        collapsingToolbarLayout.
-//                setCollapsedTitleTextColor(Color.WHITE);
 // ----- RecyclerView ----------------------------
         this.recyclerView = (RecyclerView) findViewById(R.id.rvPersons);
         this.layoutManager = new LinearLayoutManager(this);
         this.recyclerView.setLayoutManager(this.layoutManager);
 // ----- Создание набора данных для Адаптера Данных
         ArrayList<Person> list = new ArrayList<>();
-//        list.add(new Person("William Blake",
-//                "Android programmer", 25, true));
-//        list.add(new Person("Sarah White",
-//                "Selling manager", 29, false));
-//        list.add(new Person("Steven Brown",
-//                "PHP programmer", 21, true));
-//        list.add(new Person("John Orange",
-//                "Web designer", 32, true));
-//        list.add(new Person("Emma Lynch",
-//                "Advertising manager",27, false));
-//        list.add(new Person("Susanna Peach",
-//                "Insurance agent", 24, false));
-// ----- Назначение Адаптера Данных списку
+        list.add(new Person("William Blake",
+                "Android programmer", 25, true));
+        list.add(new Person("Sarah White",
+                "Selling manager", 29, false));
+        list.add(new Person("Steven Brown",
+                "PHP programmer", 21, true));
+        list.add(new Person("John Orange",
+                "Web designer", 32, true));
+        list.add(new Person("Emma Lynch",
+                "Advertising manager",27, false));
+        list.add(new Person("Susanna Peach",
+                "Insurance agent", 24, false));
+ //----- Назначение Адаптера Данных списку
         this.recyclerAdapter = new PersonRecyclerAdapter(list, this);
         this.recyclerView.setAdapter(this.recyclerAdapter);
     }
 
     public void onClickToFirstActivity(View view){
-        Intent intent = new Intent(this,
-                MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
     public void onClickCreateFile(View view){
