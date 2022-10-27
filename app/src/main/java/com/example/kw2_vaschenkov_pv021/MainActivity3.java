@@ -44,7 +44,8 @@ public class MainActivity3 extends AppCompatActivity {
                     public void onTabReselected(TabLayout.Tab tab) {
                     }
                 });
-        tabLayout.selectTab(tabLayout.getTabAt(1));
+        tabLayout.getTabAt(1).select();
+        tabLayout.getTabAt(0).select();
     }
 
     public void onClickToFirstActivity(View view){
