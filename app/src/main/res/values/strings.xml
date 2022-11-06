@@ -8,6 +8,9 @@
     <string name="next">Calculator</string>
     <string name="activity2">Files</string>
     <string name="activity3">Tabs</string>
+    <string name="activity4">Coordinator</string>
+    <string name="activity5">Threads</string>
+    <string name="activity6">Handler|Message</string>
     <string name="names">Show names</string>
     <string name="tasks">Show tasks</string>
     <string name="files">Show files</string>

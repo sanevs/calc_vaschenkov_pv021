@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout5"
+    tools:context=".MainActivity5">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/mainLL">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:id="@+id/button_menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/menu"
+                android:onClick="onClickMenu"
+                android:text="@string/previous" />
+
+            <Button
+                android:id="@+id/button_2"
+                android:layout_width="126dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:onClick="onClickBack"
+                android:text="@string/previous" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainFL"
+            >
+
+            <!-- Example One -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:stretchColumns="*"
+                android:id="@+id/exampleOne"
+                >
+
+                <TableRow>
+                    <Space />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="90sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="1"
+                        android:layout_span="2"
+                        />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/usage"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="16dp"
+                        android:text="Start and interrupt thread example"
+                        android:layout_span="2"
+                        />
+
+                </TableRow>
+
+                <TableRow>
+                    <Space />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start Thread"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#2196f3"
+                        android:id="@+id/btnStart"
+                        android:onClick="btnExampleOneClick"
+                        />
+
+
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Interrupt Thread"
+                        android:backgroundTint="#EF5350"
+                        android:id="@+id/btnInterrupt"
+                        android:onClick="btnExampleOneClick"
+                        />
+
+                </TableRow>
+
+                <Space
+                    android:layout_height="8dp"
+                    android:layout_width="8dp"
+                    />
+
+                <TableRow>
+                    <Space />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="16dp"
+                        android:text=""
+                        android:layout_span="2"
+                        android:id="@+id/tvInfo1"
+                        />
+                </TableRow>
+
+            </TableLayout>
+
+
+            <!-- Example Two -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/exampleTwo"
+                android:alpha="0"
+                android:visibility="invisible">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:stretchColumns="*"
+                    >
+
+                    <TableRow>
+                        <Space />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="90sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="2"
+                            android:layout_span="2"
+                            />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/usage"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="Start and non interrupt thread example"
+                            android:layout_span="2"
+                            />
+
+                    </TableRow>
+
+                    <TableRow>
+                        <Space />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Thread"
+                            android:textColor="#FFFFFF"
+                            app:backgroundTint="#2196f3"
+                            android:id="@+id/btnStartExampleTwo"
+                            android:onClick="btnExampleTwoClick"
+                            />
+
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Interrupt Thread"
+                            android:backgroundTint="#EF5350"
+                            android:id="@+id/btnInterruptExampleTwo"
+                            android:onClick="btnExampleTwoClick"
+                            />
+
+                    </TableRow>
+
+                    <Space
+                        android:layout_height="8dp"
+                        android:layout_width="8dp"
+                        />
+
+                    <TableRow>
+                        <Space />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="16dp"
+                            android:text=""
+                            android:layout_span="2"
+                            android:id="@+id/tvInfo2"
+                            />
+                    </TableRow>
+
+                </TableLayout>
+
+            </FrameLayout>
+
+            <!-- Example Three -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/exampleThree"
+                android:alpha="0"
+                android:visibility="invisible">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:stretchColumns="*"
+                    >
+
+                    <TableRow>
+                        <Space />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="90sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="3"
+                            android:layout_span="2"
+                            />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/usage"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="Method runOnUiThread example"
+                            android:layout_span="2"
+                            />
+
+                    </TableRow>
+
+                    <TableRow>
+                        <Space />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Thread"
+                            android:textColor="#FFFFFF"
+                            app:backgroundTint="#2196f3"
+                            android:id="@+id/btnStartExampleThree"
+                            android:onClick="btnExampleThreeClick"
+                            />
+
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Interrupt Thread"
+                            android:backgroundTint="#EF5350"
+                            android:id="@+id/btnInterruptExampleThree"
+                            android:onClick="btnExampleThreeClick"
+                            />
+
+                    </TableRow>
+
+                    <Space
+                        android:layout_height="8dp"
+                        android:layout_width="8dp"
+                        />
+
+                    <TableRow>
+                        <Space />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="16dp"
+                            android:text=""
+                            android:layout_span="2"
+                            android:id="@+id/tvInfo3"
+                            />
+                    </TableRow>
+
+                </TableLayout>
+
+            </FrameLayout>
+
+            <!-- Example Four -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/exampleFour"
+                android:alpha="0"
+                android:visibility="invisible">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:stretchColumns="*"
+                    >
+
+                    <TableRow>
+                        <Space />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="90sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="4"
+                            android:layout_span="2"
+                            />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/usage"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="16dp"
+                            android:text="Suspend and resume thread example"
+                            android:layout_span="2"
+                            />
+
+                    </TableRow>
+
+                    <TableRow>
+                        <Space />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Thread"
+                            android:textColor="#FFFFFF"
+                            app:backgroundTint="#2196f3"
+                            android:id="@+id/btnStartExampleFour"
+                            android:onClick="btnExampleFourClick"
+                            />
+
+                        <Space />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <Space />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Suspend Thread"
+                            android:backgroundTint="#F9A825"
+                            android:id="@+id/btnSuspendExampleFour"
+                            android:onClick="btnExampleFourClick"
+                            />
+
+                        <Space />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <Space />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resume Thread"
+                            android:backgroundTint="#43A047"
+                            android:id="@+id/btnResumeExampleFour"
+                            android:onClick="btnExampleFourClick"
+                            />
+
+                        <Space />
+
+                    </TableRow>
+
+
+                    <TableRow>
+
+                        <Space />
+
+                        <Button
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Interrupt Thread"
+                            android:backgroundTint="#EF5350"
+                            android:id="@+id/btnInterruptExampleFour"
+                            android:onClick="btnExampleFourClick"
+                            />
+
+                        <Space />
+
+                    </TableRow>
+
+                    <Space
+                        android:layout_height="8dp"
+                        android:layout_width="8dp"
+                        />
+
+                    <TableRow>
+                        <Space />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="16dp"
+                            android:text=""
+                            android:layout_span="2"
+                            android:id="@+id/tvInfo4"
+                            />
+                    </TableRow>
+
+                </TableLayout>
+
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    <!-- NavigationView -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu"
+        android:id="@+id/naviView"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>

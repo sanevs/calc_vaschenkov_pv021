@@ -84,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
         nameTexts.put("Ann", "This is Ann");
         nameTexts.put("John", "This is John");
         nameTexts.put("Frank", "This is Frank");
+
+        //Threads example 7
+        //MyThread myThread = new MyThread("Hello my tread");
+        //myThread.start();
     }
 
     @Override
@@ -282,6 +286,18 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickActivity3(View view){
         Intent intent = new Intent(this, MainActivity3.class);
+        startActivity(intent);
+    }
+    public void onClickActivity4(View view){
+        Intent intent = new Intent(this, MainActivity4.class);
+        startActivity(intent);
+    }
+    public void onClickActivity5(View view){
+        Intent intent = new Intent(this, MainActivity5.class);
+        startActivity(intent);
+    }
+    public void onClickActivity6(View view){
+        Intent intent = new Intent(this, MainActivity6.class);
         startActivity(intent);
     }
 }

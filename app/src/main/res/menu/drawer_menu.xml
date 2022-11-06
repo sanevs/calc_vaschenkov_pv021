@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group android:checkableBehavior="single">
+
+		<item
+			android:id="@+id/navigation_item_1"
+			android:checked="true"
+			android:icon="@drawable/usage"
+			android:title="1. Start and interrupt thread example"/>
+
+		<item
+			android:id="@+id/navigation_item_2"
+			android:checked="true"
+			android:icon="@drawable/usage"
+			android:title="2. Start and non interrupt thread example"/>
+
+		<item
+			android:id="@+id/navigation_item_3"
+			android:icon="@drawable/usage"
+			android:title="3. Method runOnUiThread example"/>
+
+		<item
+			android:id="@+id/navigation_item_4"
+			android:icon="@drawable/usage"
+			android:title="4. Suspend and resume thread example"/>
+
+
+	</group>
+
+</menu>
