@@ -5,10 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -33,7 +34,7 @@ public class MainActivity6 extends AppCompatActivity {
             {
                 while (true)
                 {
-                    Thread.sleep(20);
+                    Thread.sleep(10);
 
                     if (isIncrease)
                     {
@@ -81,15 +82,12 @@ public class MainActivity6 extends AppCompatActivity {
                 @Override
                 public void handleMessage(Message msg) {
                     Button button = activity.findViewById(msg.what);
-                    ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(
-                            100, 100);
-                    params.setMarginStart(1000);
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(100,100);
+                    params.setMarginStart(400);
                     params.width = msg.arg1;
                     params.height = msg.arg2;
                     if(button != null){
                         button.setLayoutParams(params);
-                        //button.setWidth(msg.arg1);
-                        //button.setHeight(msg.arg2);
                     }
                 }
             };
