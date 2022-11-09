@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity5 extends AppCompatActivity {
-    // ----- Inner class
+    // ----- Inner clas
     class MyThread4 extends Thread{
         private	final	static	String	THR_TAG	= "MyThread4";
 
