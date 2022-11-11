@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/clMain"
-    tools:context=".MainActivity4">
+    tools:context=".MainActivities.MainActivity4">
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:text="@string/previous"
         app:layout_anchor="@+id/button"
-        app:layout_anchorGravity="end|bottom"
         android:onClick="onClickBack"/>
 
     <LinearLayout

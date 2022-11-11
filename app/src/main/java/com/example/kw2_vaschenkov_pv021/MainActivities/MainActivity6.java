@@ -1,18 +1,18 @@
-package com.example.kw2_vaschenkov_pv021;
+package com.example.kw2_vaschenkov_pv021.MainActivities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.kw2_vaschenkov_pv021.R;
 
 public class MainActivity6 extends AppCompatActivity {
     class MyThreadResizer extends Thread{
@@ -88,6 +88,7 @@ public class MainActivity6 extends AppCompatActivity {
                     params.height = msg.arg2;
                     if(button != null){
                         button.setLayoutParams(params);
+                        button.setText(msg.arg1 + " x " + msg.arg2);
                     }
                 }
             };

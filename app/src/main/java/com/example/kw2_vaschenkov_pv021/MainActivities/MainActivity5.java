@@ -1,4 +1,4 @@
-package com.example.kw2_vaschenkov_pv021;
+package com.example.kw2_vaschenkov_pv021.MainActivities;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.kw2_vaschenkov_pv021.R;
 import com.example.kw2_vaschenkov_pv021.Threads_classes.*;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;

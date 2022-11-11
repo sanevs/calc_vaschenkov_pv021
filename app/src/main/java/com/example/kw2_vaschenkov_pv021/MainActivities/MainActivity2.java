@@ -1,4 +1,4 @@
-package com.example.kw2_vaschenkov_pv021;
+package com.example.kw2_vaschenkov_pv021.MainActivities;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -26,6 +26,8 @@ import android.widget.Toast;
 import com.example.kw2_vaschenkov_pv021.Data.Person;
 import com.example.kw2_vaschenkov_pv021.Data.PersonRecyclerAdapter;
 import com.example.kw2_vaschenkov_pv021.Data.Product;
+import com.example.kw2_vaschenkov_pv021.MySQLiteHelper;
+import com.example.kw2_vaschenkov_pv021.R;
 
 import java.io.File;
 import java.io.FileWriter;

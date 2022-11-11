@@ -1,11 +1,11 @@
-package com.example.kw2_vaschenkov_pv021;
+package com.example.kw2_vaschenkov_pv021.MainActivities;
 
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
+import com.example.kw2_vaschenkov_pv021.R;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;

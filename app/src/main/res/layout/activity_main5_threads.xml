@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout5"
-    tools:context=".MainActivity5">
+    tools:context=".MainActivities.MainActivity5">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/menu"
                 android:onClick="onClickMenu"
-                android:text="@string/previous" />
+                 />
 
             <Button
                 android:id="@+id/button_2"
